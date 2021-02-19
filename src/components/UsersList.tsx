@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { User } from '../interfaces';
 
-const UsersList = () => {
+interface UsersListProps {
+    users: User[];
+}
+
+const UsersList: FC<UsersListProps> = ({ users }) => {
 
     return (
-        <div>List</div>
+        <ul>
+            {users.map((user: User) => {
+                return (
+                    <li key={user.id} style={{listStyle: 'decimal'}}>
+                        {user.name}
+                        <span>@{user.username}</span>
+                    </li>
+                )
+            })}
+        </ul>
     )
 }
 
