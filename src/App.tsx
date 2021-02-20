@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback, FC } from 'react';
 import SearchInput from './components/SearchInput';
 import UsersList from './components/UsersList';
 import { User } from './interfaces';
+import './styles/main.scss';
 
 const App: FC = () => {
     const [users, setUsers] = useState<User[] | []>([]);
@@ -38,8 +39,9 @@ const App: FC = () => {
     }, [searchValue, handleUsersFilter])
 
     return (
-        <div className="App">
-            <SearchInput value={searchValue} onChange={handleInputChange} />
+        <div className="app__container">
+            <h1 className="app__header">Users list</h1>
+            <SearchInput value={searchValue} placeholder="Search by user name..." onChange={handleInputChange} />
             <UsersList users={filteredUsers} />
         </div>
     );

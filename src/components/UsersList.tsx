@@ -8,10 +8,10 @@ interface UsersListProps {
 const UsersList: FC<UsersListProps> = ({ users }) => {
 
     return (
-        <ul>
+        <ul className="list">
             {users.map((user: User) => {
                 return (
-                    <li key={user.id} style={{listStyle: 'decimal'}}>
+                    <li key={user.id} className="list__item">
                         {user.name}
                         <span>@{user.username}</span>
                     </li>
