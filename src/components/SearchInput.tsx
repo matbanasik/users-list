@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const SearchInput = () => {
+interface SearchInputProps {
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const SearchInput: FC<SearchInputProps> = ({ value, onChange }) => {
 
     return (
-        <input />
+        <input value={value} onChange={onChange} />
     )
 }
 
