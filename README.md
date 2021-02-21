@@ -1,3 +1,10 @@
+# Possible improvements
+- Move API call to seperate service
+- Add more tests
+- Handle side effects through RxJS, middleware or saga
+- Debounce change event on input
+- Add loading indicator
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
